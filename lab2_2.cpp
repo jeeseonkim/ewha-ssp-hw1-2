@@ -22,11 +22,8 @@ void setup()
 
 void loop()
 {
-	myAnalogWrite(REAR_LED_PIN, 100,2000);
-	myAnalogWrite(REAR_LED_PIN, 75, 2000);
-	myAnalogWrite(REAR_LED_PIN, 50, 2000);
-	myAnalogWrite(REAR_LED_PIN, 25, 2000);
-	myAnalogWrite(REAR_LED_PIN, 0, 2000);
+	for(int i=100;i>=0;i-=1)
+			myAnalogWrite(REAR_LED_PIN, i,10000/100);
 
-	exit(0);
+		exit(0);
 }
